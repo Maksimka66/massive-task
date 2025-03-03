@@ -64,8 +64,10 @@ export default function SignUpForm() {
                         <>
                             I Accept Massive’s
                             <a
-                                href="/https://partners.joinmassive.com/plans"
+                                href="https://partners.joinmassive.com/plans"
                                 className={styles.terms__link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Terms & Conditions
                             </a>
@@ -75,19 +77,11 @@ export default function SignUpForm() {
                     register={register("acceptTerms")}
                     error={errors.acceptTerms?.message}
                 />
-                <Button
-                    type="submit"
-                    className={styles.submit}
-                    handler={handleSubmit}
-                >
+                <Button type="submit" className={styles.submit}>
                     Submit
                 </Button>
             </form>
-            <Button
-                type="button"
-                className={styles.google}
-                handler={handleSubmit}
-            >
+            <Button type="button" className={styles.google}>
                 <div className={styles.googleInfoContainer}>
                     <svg
                         width="20px"

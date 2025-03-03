@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, ReactNode } from "react";
-import { SubmitHandler, UseFormRegisterReturn } from "react-hook-form";
+import { UseFormRegisterReturn } from "react-hook-form";
 
 export interface IFieldProps extends InputHTMLAttributes<HTMLInputElement> {
     type: "password" | "email" | "checkbox";
@@ -22,7 +22,6 @@ export interface ISignUpForm {
 
 export interface IButtonStyles {
     children: ReactNode;
-    handler: SubmitHandler<ISignUpForm>;
     type: "submit" | "reset" | "button";
     className: string;
 }
