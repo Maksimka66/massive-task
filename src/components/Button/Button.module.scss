@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.button {
+    font-family: $font-montserrat;
+
+    border-radius: 25px;
+    height: 36px;
+    min-width: 300px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.25px;
+    line-height: 24px;
+    outline: none;
+    padding: 5px 19px;
+    text-align: center;
+}
+
+.submit {
+    color: $text-color-default;
+    background: $tomato-color;
+}
+
+.google {
+}
