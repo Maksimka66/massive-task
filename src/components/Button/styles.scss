@@ -1,7 +1,7 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as vars;
 
 .button {
-    font-family: $font-montserrat;
+    font-family: vars.$font-montserrat;
 
     border-radius: 25px;
     height: 36px;
@@ -17,12 +17,4 @@
     outline: none;
     padding: 5px 19px;
     text-align: center;
-}
-
-.submit {
-    color: $text-color-default;
-    background: $tomato-color;
-}
-
-.google {
 }

@@ -1,4 +1,4 @@
-import ProductsLink from "../../components/ProductsLink/ProductsLink";
+import ProductsLink from "../../components/ProductsLink";
 
 export default function Home() {
     return (

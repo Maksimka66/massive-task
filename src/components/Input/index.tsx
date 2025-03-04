@@ -1,6 +1,8 @@
+import clsx from "clsx";
+
 import { IFieldProps } from "../../types/interfaces";
 
-import styles from "./Input.module.scss";
+import "./styles.scss";
 
 export default function Input({
     type,
@@ -14,21 +16,18 @@ export default function Input({
     labelStyle,
 }: IFieldProps) {
     return (
-        <div className={`${styles.inputContainer} ${containerStyle}`}>
-            <label
-                htmlFor={id}
-                className={`${styles.field__label} ${labelStyle}`}
-            >
+        <div className={clsx("input", containerStyle)}>
+            <label htmlFor={id} className={clsx("input__label", labelStyle)}>
                 {label}
             </label>
             <input
-                className={`${styles.field} ${inputStyle}`}
+                className={clsx("input__field", inputStyle)}
                 id={id}
                 type={type}
                 placeholder={placeholder}
                 {...register}
             />
-            {error && <span className={styles.errorMessage}>{error}</span>}
+            {error && <span className="input__error">{error}</span>}
         </div>
     );
 }

@@ -1,10 +1,12 @@
+import clsx from "clsx";
+
 import { IButtonStyles } from "../../types/interfaces";
 
-import styles from "./Button.module.scss";
+import "./styles.scss";
 
 export default function Button({ children, type, className }: IButtonStyles) {
     return (
-        <button className={`${styles.button} ${className}`} type={type}>
+        <button className={clsx("button", className)} type={type}>
             {children}
         </button>
     );

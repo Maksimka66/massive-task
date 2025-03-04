@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 
-import Home from "../Home/Home";
-import Products from "../Products/Products";
-import Product from "../Product/Product";
-import SignUp from "../SignUp/SignUp";
-import NotFound from "../NotFound/NotFound";
-import Nav from "../../components/Nav/Nav";
+import Home from "../Home";
+import Products from "../Products";
+import Product from "../Product";
+import SignUp from "../SignUp";
+import NotFound from "../NotFound";
+import SignIn from "../SignIn";
+import Nav from "../../components/Nav";
 
 import "./App.css";
-import SignIn from "../SignIn/SignIn";
 
 function App() {
     return (

@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import Input from "../Input/Input";
-import Button from "../Button/Button";
+import Input from "../Input";
+import Button from "../Button";
 import { ISignUpForm } from "../../types/interfaces";
 import { SchemaSignUp } from "./SignUpSchema";
 
-import styles from "./SignUpForm.module.scss";
+import "./styles.scss";
 
 export default function SignUpForm() {
     const {
@@ -24,18 +24,15 @@ export default function SignUpForm() {
     };
 
     return (
-        <div className={styles.signUpForm__container}>
-            <h3 className={styles.formTitle}>Create account</h3>
-            <form
-                className={styles.signUpForm}
-                onSubmit={handleSubmit(submitForm)}
-            >
+        <div className="form">
+            <h3 className="form__title">Create account</h3>
+            <form className="form__signup" onSubmit={handleSubmit(submitForm)}>
                 <Input
                     type="email"
                     placeholder="Insert email address"
                     label="Email"
                     id="email"
-                    inputStyle={styles.email}
+                    inputStyle="form__email"
                     register={register("email")}
                     error={errors.email?.message}
                 />
@@ -58,14 +55,14 @@ export default function SignUpForm() {
                 <Input
                     type="checkbox"
                     placeholder=""
-                    containerStyle={styles.checkboxContainer}
-                    inputStyle={styles.checkbox}
+                    containerStyle="form__checkboxContainer"
+                    inputStyle="form__checkbox"
                     label={
                         <>
                             I Accept Massive’s
                             <a
                                 href="https://partners.joinmassive.com/plans"
-                                className={styles.terms__link}
+                                className="terms__link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -77,12 +74,12 @@ export default function SignUpForm() {
                     register={register("acceptTerms")}
                     error={errors.acceptTerms?.message}
                 />
-                <Button type="submit" className={styles.submit}>
+                <Button type="submit" className="submit">
                     Submit
                 </Button>
             </form>
-            <Button type="button" className={styles.google}>
-                <div className={styles.googleInfoContainer}>
+            <Button type="button" className="google">
+                <div className="googleInfoContainer">
                     <svg
                         width="20px"
                         height="20px"
@@ -111,15 +108,13 @@ export default function SignUpForm() {
                     <p> Sign up with Google</p>
                 </div>
             </Button>
-            <div className={styles.linkContainer}>
-                <p className={styles.linkContainer__text}>
-                    Already have an account?
-                </p>
-                <NavLink to="/signin" className={styles.signinLink}>
+            <div className="linkContainer">
+                <p className="linkContainer__text">Already have an account?</p>
+                <NavLink to="/signin" className="signinLink">
                     Login
                 </NavLink>
             </div>
-            <p className={styles.companyInfo}>© 2025 Massive Computing, Inc.</p>
+            <p className="companyInfo">© 2025 Massive Computing, Inc.</p>
         </div>
     );
 }
