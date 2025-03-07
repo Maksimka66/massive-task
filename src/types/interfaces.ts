@@ -22,6 +22,6 @@ export interface ISignUpForm {
 
 export interface IButtonStyles {
     children: ReactNode;
-    type: "submit" | "reset" | "button";
-    className: string;
+    type?: "submit" | "reset" | "button";
+    className?: string;
 }

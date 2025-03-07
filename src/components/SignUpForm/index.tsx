@@ -105,7 +105,7 @@ export default function SignUpForm() {
                             fill="#EB4335"
                         ></path>
                     </svg>
-                    <p> Sign up with Google</p>
+                    <p>Sign up with Google</p>
                 </div>
             </Button>
             <div className="linkContainer">

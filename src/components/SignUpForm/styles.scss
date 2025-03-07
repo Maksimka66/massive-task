@@ -92,15 +92,15 @@
 .linkContainer {
     display: flex;
     gap: 12px;
-}
 
-.linkContainer__text {
-    font-family: vars.$font-montserrat;
+    &__text {
+        font-family: vars.$font-montserrat;
 
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.321429px;
-    line-height: 1.4;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.321429px;
+        line-height: 1.4;
+    }
 }
 
 .signinLink {
