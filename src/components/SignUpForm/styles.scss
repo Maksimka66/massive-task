@@ -1,0 +1,126 @@
+@use "../../styles/variables" as vars;
+
+.form {
+    background-color: vars.$background-default;
+    border: 1px solid vars.$border-color;
+
+    margin: 0 auto;
+    border-radius: 1rem;
+    max-width: 616px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+
+    &__title {
+        color: vars.$text-color;
+        font-family: vars.$font-montserrat;
+
+        text-align: left;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.321429px;
+        line-height: 1.4;
+    }
+
+    &__signup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    &__email {
+        background-color: vars.$background-color;
+    }
+
+    &__checkboxContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__checkbox {
+        width: auto;
+    }
+}
+
+.terms__link {
+    color: vars.$text-color;
+
+    text-decoration: underline;
+    margin-left: 8px;
+}
+
+.submit {
+    color: vars.$text-color-default;
+    background: vars.$tomato-color;
+}
+
+.google {
+    background-color: vars.$background-default;
+    color: vars.$gray-color;
+    border: 1px solid vars.$gray-color;
+
+    margin-bottom: 32px;
+}
+
+.google:hover {
+    background-color: vars.$gray-color;
+    color: vars.$text-color-default;
+
+    transition: background-color 0.3s ease, color 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.googleInfoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.linkContainer {
+    display: flex;
+    gap: 12px;
+
+    &__text {
+        font-family: vars.$font-montserrat;
+
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.321429px;
+        line-height: 1.4;
+    }
+}
+
+.signinLink {
+    font-family: vars.$font-montserrat;
+    color: vars.$tomato-color;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.321429px;
+    text-decoration: none;
+}
+
+.companyInfo {
+    font-family: vars.$font-montserrat;
+
+    color: #4a4a4a;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 32px;
+    text-align: center;
+}

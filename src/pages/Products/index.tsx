@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { getProducts } from "../data/data";
+import { getProducts } from "../../data/data";
 
 export default function Products() {
     const data = getProducts();
