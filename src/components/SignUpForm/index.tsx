@@ -1,32 +1,21 @@
 import { NavLink } from "react-router-dom";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { FieldValues } from "react-hook-form";
 
 import Input from "../Input";
 import Button from "../Button";
 import { ISignUpForm } from "../../types/interfaces";
-import { SchemaSignUp } from "./SignUpSchema";
 
 import "./styles.scss";
 
-export default function SignUpForm() {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm<ISignUpForm>({
-        mode: "onSubmit",
-        resolver: yupResolver(SchemaSignUp),
-    });
-
-    const submitForm: SubmitHandler<ISignUpForm> = async (data) => {
-        console.log(data);
-    };
-
+export default function SignUpForm({
+    register,
+    handleSubmit,
+    errors,
+}: ISignUpForm<FieldValues>) {
     return (
         <div className="form">
             <h3 className="form__title">Create account</h3>
-            <form className="form__signup" onSubmit={handleSubmit(submitForm)}>
+            <form className="form__signup" onSubmit={handleSubmit}>
                 <Input
                     type="email"
                     placeholder="Insert email address"
