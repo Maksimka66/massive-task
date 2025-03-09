@@ -10,8 +10,6 @@ import {
     UseFormRegisterReturn,
     FieldErrors,
     FieldError,
-    FieldErrorsImpl,
-    Merge,
 } from "react-hook-form";
 
 export interface IFieldProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -19,24 +17,24 @@ export interface IFieldProps extends InputHTMLAttributes<HTMLInputElement> {
     placeholder?: string;
     label?: string | ReactNode;
     id?: string;
-    error?:
-        | string
-        | FieldError
-        | Merge<FieldError, FieldErrorsImpl<FieldValues>>;
     register?: UseFormRegisterReturn;
     containerStyle?: string;
     inputStyle?: string;
     labelStyle?: string;
+    error?: string | FieldError;
 }
 
-export interface ISignUpForm<T extends FieldValues> {
-    register: UseFormRegister<T>;
-    handleSubmit: FormEventHandler<HTMLFormElement>;
-    errors: FieldErrors<T>;
+export interface ISignUpFormData extends FieldValues {
     email: string;
     password: string;
     confirmPassword: string;
     acceptTerms: boolean;
+}
+
+export interface ISignUpFormProps {
+    register: UseFormRegister<ISignUpFormData>;
+    handleSubmit: FormEventHandler<HTMLFormElement>;
+    errors: FieldErrors<ISignUpFormData>;
 }
 
 export interface IButtonStyles extends ButtonHTMLAttributes<HTMLButtonElement> {

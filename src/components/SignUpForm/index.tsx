@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { FieldValues } from "react-hook-form";
 
 import Input from "../Input";
 import Button from "../Button";
-import { ISignUpForm } from "../../types/interfaces";
+import { ISignUpFormProps } from "../../types/interfaces";
 
 import "./styles.scss";
 
@@ -11,7 +10,7 @@ export default function SignUpForm({
     register,
     handleSubmit,
     errors,
-}: ISignUpForm<FieldValues>) {
+}: ISignUpFormProps) {
     return (
         <div className="form">
             <h3 className="form__title">Create account</h3>

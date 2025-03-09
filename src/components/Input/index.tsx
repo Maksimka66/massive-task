@@ -27,7 +27,7 @@ export default function Input({
                 placeholder={placeholder}
                 {...register}
             />
-            {error && <span className="input__error">{error}</span>}
+            {error && <span className="input__error">{String(error)}</span>}
         </div>
     );
 }

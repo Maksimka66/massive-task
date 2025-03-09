@@ -1,8 +1,8 @@
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import SignUpForm from "../../components/SignUpForm";
-import { ISignUpForm } from "../../types/interfaces";
+import { ISignUpFormData } from "../../types/interfaces";
 import { SchemaSignUp } from "../../components/SignUpForm/SignUpSchema";
 
 import "./styles.scss";
@@ -12,14 +12,12 @@ export default function SignUp() {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm<ISignUpForm<FieldValues>>({
+    } = useForm<ISignUpFormData>({
         mode: "onSubmit",
         resolver: yupResolver(SchemaSignUp),
     });
 
-    const submitForm: SubmitHandler<ISignUpForm<FieldValues>> = async (
-        data
-    ) => {
+    const submitForm: SubmitHandler<ISignUpFormData> = async (data) => {
         console.log(data);
     };
 
